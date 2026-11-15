@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa de granito con vistas · Callejón de la Paloma 7, Hoyo de Manzanares</title>
+<meta name="description" content="Vivienda de granito con tres zonas independientes y vistas a Madrid y a la Sierra, en Hoyo de Manzanares. 320 m², 8 dormitorios, 4 baños, parcela de 471 m². En exclusiva: Promoción y Gestión Inmobiliaria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stone:#efeae1; --stone-2:#e3dccf; --granite:#2f2e2b; --granite-2:#4a4843;
+  --muted:#7b766c; --sage:#5f6f52; --sage-2:#8a9a7a; --almond:#e8c9c1; --line:rgba(47,46,43,.14);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--stone);color:var(--granite);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);font-weight:700}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(38px,5.4vw,68px)}
+h2 em{font-style:italic;color:var(--sage)}
+
+/* ---------- barra superior + menú ---------- */
+.bar{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 4vw;transition:background .35s,box-shadow .35s,color .35s;color:#fff}
+.bar.solid{background:rgba(239,234,225,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--granite);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;flex-direction:column;line-height:1.1;text-decoration:none}
+.brand b{font-family:var(--serif);font-size:21px;font-weight:600}
+.brand span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
+.bar-r{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:600 14px var(--sans);padding:12px 20px;border-radius:999px;text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-dark{background:var(--granite);color:var(--stone)}
+.btn-light{background:#fff;color:var(--granite)}
+.btn-ghost{background:transparent;color:inherit;border:1px solid currentColor}
+.bar .btn-visit{background:#fff;color:var(--granite)}
+.bar.solid .btn-visit{background:var(--granite);color:var(--stone)}
+.menu-btn{width:46px;height:46px;border-radius:50%;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer;display:grid;place-items:center}
+.menu-btn i{display:block;width:18px;height:2px;background:currentColor;position:relative}
+.menu-btn i:before,.menu-btn i:after{content:"";position:absolute;left:0;width:18px;height:2px;background:currentColor}
+.menu-btn i:before{top:-6px}.menu-btn i:after{top:6px}
+.drawer{position:fixed;inset:0;z-index:60;background:var(--granite);color:var(--stone);display:flex;flex-direction:column;justify-content:center;padding:0 8vw;opacity:0;pointer-events:none;transition:opacity .35s}
+.drawer.open{opacity:1;pointer-events:auto}
+.drawer a{font-family:var(--serif);font-size:clamp(34px,6vw,58px);text-decoration:none;line-height:1.25;display:block;opacity:.85}
+.drawer a:hover{opacity:1;color:var(--almond)}
+.drawer .close{position:absolute;top:18px;right:4vw;background:none;border:1px solid var(--stone);color:var(--stone);width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer}
+.drawer small{margin-top:30px;opacity:.6;font-size:13px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;color:#fff}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;animation:push 22s ease-out both}
+@keyframes push{from{transform:scale(1.14)}to{transform:scale(1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4) 0%,rgba(0,0,0,0) 26%,rgba(0,0,0,.3) 50%,rgba(20,18,15,.88) 100%)}
+.hero-in{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:0 4vw 6vh}
+.hero .eyebrow{color:var(--almond)}
+.hero h1{font-size:clamp(46px,8.4vw,118px);margin:12px 0 18px;max-width:12ch}
+.hero h1 em{font-style:italic}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:15px;align-items:baseline}
+.facts .price{font-family:var(--serif);font-size:clamp(30px,3.6vw,44px);font-weight:600;margin-right:10px}
+.facts span b{font-weight:700}
+.scroll-cue{position:absolute;z-index:2;right:4vw;bottom:6vh;font-size:12px;letter-spacing:.2em;text-transform:uppercase;writing-mode:vertical-rl;display:flex;align-items:center;gap:12px}
+.scroll-cue:after{content:"";width:1px;height:60px;background:#fff;animation:cue 2s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- intro ---------- */
+.intro{padding:120px 0 90px}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end}
+.intro p.lead{font-family:var(--serif);font-size:clamp(26px,2.7vw,36px);line-height:1.25;margin-top:22px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+.stat{padding:22px 0;border-bottom:1px solid var(--line)}
+.stat:nth-child(odd){padding-right:18px;border-right:1px solid var(--line)}
+.stat:nth-child(even){padding-left:22px}
+.stat b{display:block;font-family:var(--serif);font-size:46px;font-weight:600;line-height:1}
+.stat span{font-size:13px;color:var(--muted)}
+
+/* ---------- recorrido (scroll) ---------- */
+.tour{position:relative;background:#111}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.scene{position:absolute;inset:0;opacity:0;will-change:opacity}
+.scene img{position:absolute;inset:-2%;width:104%;height:104%;object-fit:cover;will-change:transform,object-position}
+.scene:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 45%,rgba(0,0,0,.72) 100%)}
+.cap{position:absolute;z-index:3;left:4vw;bottom:9vh;color:#fff;max-width:min(560px,86vw);opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+.cap.on{opacity:1;transform:none}
+.cap .n{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--almond);font-weight:700}
+.cap h3{font-size:clamp(34px,4.6vw,60px);margin:8px 0 8px}
+.cap p{font-size:16px;opacity:.9}
+.rail{position:absolute;z-index:4;right:3vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px}
+.rail button{all:unset;cursor:pointer;display:flex;align-items:center;justify-content:flex-end;gap:10px;color:#fff;font-size:12px;letter-spacing:.06em}
+.rail button span{opacity:0;transition:opacity .3s}
+.rail button{text-shadow:0 1px 4px rgba(0,0,0,.6)}
+.rail button i{box-shadow:0 0 0 1px rgba(0,0,0,.25),0 1px 6px rgba(0,0,0,.5);width:8px;height:8px;border-radius:50%;border:1px solid #fff;transition:background .3s,transform .3s}
+.rail button.on i{background:#fff;transform:scale(1.35)}
+.rail button.on span,.rail:hover button span{opacity:.9}
+.tour-top{position:absolute;z-index:4;top:96px;left:4vw;color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.75}
+.progress{position:absolute;z-index:4;left:0;bottom:0;height:3px;background:var(--almond);width:0}
+
+/* ---------- tres viviendas ---------- */
+.units{padding:120px 0}
+.units-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:50px}
+.tabs{display:flex;flex-direction:column;gap:12px}
+.tab{all:unset;cursor:pointer;display:block;padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.35);transition:background .25s,border-color .25s,transform .25s}
+.tab:hover{transform:translateX(4px)}
+.tab.on{background:#fff;border-color:var(--sage)}
+.tab .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);font-weight:700}
+.tab h3{font-size:30px;margin:4px 0 8px}
+.tab ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.tab li{font-size:13px;padding:4px 10px;border-radius:99px;background:var(--stone-2)}
+.iso{width:100%;height:auto}
+.iso .blk{transition:fill .35s,opacity .35s}
+.iso .z{cursor:pointer}
+.note{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+.uses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:70px}
+.use{padding:28px;border-radius:20px;background:var(--granite);color:var(--stone)}
+.use b{font-family:var(--serif);font-size:28px;font-weight:500;display:block;margin-bottom:6px}
+.use p{font-size:15px;opacity:.8}
+
+/* ---------- vistas ---------- */
+.views{background:var(--granite);color:var(--stone);padding:120px 0}
+.views h2 em{color:var(--almond)}
+.views-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;margin-top:50px}
+.frame{overflow:hidden;border-radius:22px;position:relative}
+.frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.frame.in img{transform:scale(1)}
+.views-grid .tall{grid-row:span 2;aspect-ratio:3/4.2}
+.views-grid .wide{aspect-ratio:16/10}
+.frame figcaption{position:absolute;left:16px;bottom:14px;font-size:13px;background:rgba(0,0,0,.45);padding:6px 12px;border-radius:99px;backdrop-filter:blur(6px)}
+.views-copy{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:60px}
+.views-copy b{font-family:var(--serif);font-size:44px;font-weight:600;display:block;line-height:1;color:var(--almond)}
+.views-copy span{font-size:14px;opacity:.75}
+
+/* ---------- galería ---------- */
+.gallery{padding:120px 0}
+.g-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.g-grid{columns:4 220px;column-gap:12px;margin-top:40px}
+.g-grid button{all:unset;cursor:zoom-in;display:block;margin-bottom:12px;border-radius:12px;overflow:hidden;break-inside:avoid;background:var(--stone-2)}
+.g-grid img{width:100%;transition:transform .5s}
+.g-grid button:hover img{transform:scale(1.04)}
+.lb{position:fixed;inset:0;z-index:70;background:rgba(15,14,12,.95);display:none;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:84vh;border-radius:8px}
+.lb button{position:absolute;background:rgba(255,255,255,.1);color:#fff;border:0;width:54px;height:54px;border-radius:50%;font-size:24px;cursor:pointer}
+.lb .x{top:18px;right:18px}.lb .pv{left:2vw;top:50%;transform:translateY(-50%)}.lb .nx{right:2vw;top:50%;transform:translateY(-50%)}
+.lb .ct{position:absolute;bottom:18px;color:#fff;font-size:13px;opacity:.7}
+
+/* ---------- ficha + hipoteca ---------- */
+.data{padding:0 0 120px}
+.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:#fff;border-radius:24px;padding:36px}
+.card h3{font-size:36px;margin-bottom:18px}
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.spec div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.spec div span{color:var(--muted)}
+.spec .energy{display:inline-block;background:#d62f2f;color:#fff;font-weight:700;padding:0 10px;border-radius:4px}
+.calc label{display:block;font-size:14px;color:var(--muted);margin-top:16px}
+.calc label b{float:right;color:var(--granite)}
+.calc input[type=range]{width:100%;accent-color:var(--sage);margin-top:8px}
+.quota{margin-top:24px;padding:22px;border-radius:16px;background:var(--stone);display:flex;justify-content:space-between;align-items:baseline}
+.quota b{font-family:var(--serif);font-size:48px;font-weight:600;line-height:1}
+.fine{font-size:12px;color:var(--muted);margin-top:12px}
+
+/* ---------- entorno ---------- */
+.area{padding:0 0 120px}
+.area-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.dist{list-style:none;margin-top:30px}
+.dist li{display:flex;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.dist b{font-family:var(--serif);font-size:40px;font-weight:600;min-width:120px;line-height:1}
+.dist span{font-size:15px}
+.area .frame{aspect-ratio:4/3}
+
+/* ---------- contacto ---------- */
+.contact{background:var(--sage);color:#fff;padding:110px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact h2 em{color:var(--almond)}
+.contact p{opacity:.9;margin-top:18px;max-width:46ch}
+form{background:var(--stone);color:var(--granite);border-radius:24px;padding:32px;display:grid;gap:14px}
+form label{font-size:13px;font-weight:600}
+form input,form select,form textarea{width:100%;font:15px var(--sans);padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;margin-top:6px;color:var(--granite)}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ok{display:none;background:#fff;border-radius:14px;padding:16px;font-size:14px}
+.ok.show{display:block}
+footer{background:var(--granite);color:var(--stone);padding:50px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;opacity:.85}
+footer a{opacity:.7}
+
+/* ---------- aparición ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  body{font-size:16px}
+  .bar .btn-visit{display:none}
+  .intro{padding:80px 0 60px}
+  .intro-grid,.units-grid,.views-grid,.data-grid,.area-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
+  .uses,.views-copy{grid-template-columns:1fr}
+  .units-grid>div:last-child{order:-1}
+  .iso{max-width:420px;margin:0 auto;display:block}
+  .views-grid .tall{grid-row:auto;aspect-ratio:4/5}
+  .rail button span{display:none}
+  .spec{grid-template-columns:1fr}
+  .card{padding:26px}
+  form .row{grid-template-columns:1fr}
+  .units,.views,.gallery{padding:80px 0}
+  .scroll-cue{display:none}
+  .cap{bottom:7vh}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero img{animation:none}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="bar" id="bar">
+  <a href="#inicio" class="brand"><b>Callejón de la Paloma 7</b><span>Hoyo de Manzanares</span></a>
+  <div class="bar-r">
+    <a href="#visita" class="btn btn-visit">Solicitar visita</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><i></i></button>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-label="Secciones">
+  <button class="close" id="menuClose" aria-label="Cerrar menú">×</button>
+  <a href="#inicio">Inicio</a>
+  <a href="#recorrido">Recorrido</a>
+  <a href="#viviendas">Tres viviendas</a>
+  <a href="#vistas">Las vistas</a>
+  <a href="#galeria">Galería</a>
+  <a href="#datos">Ficha y financiación</a>
+  <a href="#entorno">Entorno</a>
+  <a href="#visita">Solicitar visita</a>
+  <small>Promoción y Gestión Inmobiliaria · Hoyo de Manzanares</small>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <img data-id="b6eb3d34-6d62-45bb-8b80-81b2ac3abc97" alt="Fachada de granito de la vivienda">
+  <div class="hero-in">
+    <div class="eyebrow">En exclusiva · Hoyo de Manzanares</div>
+    <h1>La casa de granito <em>con vistas</em> a Madrid</h1>
+    <div class="facts">
+      <span class="price">750.000 €</span>
+      <span><b>320</b> m² construidos</span>
+      <span><b>471</b> m² de parcela</span>
+      <span><b>8</b> dormitorios</span>
+      <span><b>4</b> baños</span>
+    </div>
+  </div>
+  <div class="scroll-cue">Desliza</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap intro-grid">
+    <div class="rv">
+      <div class="eyebrow">Una casa, tres hogares</div>
+      <p class="lead">Granito, almendros y un horizonte que llega hasta Madrid. Tres viviendas independientes dentro de la misma finca, con accesos diferenciados, en pleno Parque Regional de la Cuenca Alta del Manzanares.</p>
+    </div>
+    <div class="stats rv">
+      <div class="stat"><b>3</b><span>zonas independientes</span></div>
+      <div class="stat"><b>80+</b><span>m² de salón en planta baja</span></div>
+      <div class="stat"><b>8′</b><span>a pie del centro del pueblo</span></div>
+      <div class="stat"><b>10 m</b><span>de pozo propio para riego</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RECORRIDO -->
+<section class="tour" id="recorrido">
+  <div class="stage" id="stage">
+    <div class="tour-top">Recorrido · desliza para avanzar</div>
+    <div class="rail" id="rail"></div>
+    <div class="progress" id="prog"></div>
+  </div>
+</section>
+
+<!-- TRES VIVIENDAS -->
+<section class="units" id="viviendas">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Distribución</div>
+      <h2>Tres viviendas, <em>una sola finca</em></h2>
+    </div>
+    <div class="units-grid">
+      <div class="tabs rv" id="tabs">
+        <button class="tab on" data-z="pb">
+          <div class="k">Planta baja · reformada · 160 m²</div>
+          <h3>La vivienda principal</h3>
+          <ul><li>Salón-comedor de +80 m²</li><li>Salida directa al exterior</li><li>Dormitorio en suite</li><li>2 dormitorios</li><li>Baño completo</li></ul>
+        </button>
+        <button class="tab" data-z="a">
+          <div class="k">Primera planta · zona A</div>
+          <h3>Vivienda independiente</h3>
+          <ul><li>2 dormitorios</li><li>Cocina</li><li>Salón-comedor</li><li>Baño</li></ul>
+        </button>
+        <button class="tab" data-z="b">
+          <div class="k">Primera planta · zona B</div>
+          <h3>Vivienda independiente</h3>
+          <ul><li>2 dormitorios</li><li>Cocina</li><li>Salón-comedor</li><li>Baño</li></ul>
+        </button>
+      </div>
+      <div class="rv">
+        <svg class="iso" viewBox="0 0 520 430" id="iso" role="img" aria-label="Esquema de las tres zonas de la casa">
+          <polygon points="260,405 30,290 260,175 490,290" fill="#ddd6c8"/>
+          <g fill="#8a9a7a" opacity=".9"><circle cx="80" cy="300" r="15"/><circle cx="104" cy="322" r="10"/><circle cx="446" cy="300" r="14"/><circle cx="420" cy="324" r="9"/><circle cx="262" cy="392" r="10"/></g>
+          <g stroke="#2f2e2b" stroke-opacity=".18" stroke-width="1" stroke-linejoin="round">
+            <g class="z" data-z="pb">
+              <polygon class="blk" id="pbL" points="260,360 110,285 110,215 260,290"/>
+              <polygon class="blk" id="pbR" points="260,360 410,285 410,215 260,290"/>
+            </g>
+            <g class="z" data-z="a">
+              <polygon class="blk" id="aL" points="260,290 110,215 110,145 260,220"/>
+              <polygon class="blk" id="aR" points="260,290 335,252.5 335,182.5 260,220"/>
+              <polygon class="blk" id="aT" points="260,220 110,145 185,107.5 335,182.5"/>
+            </g>
+            <g class="z" data-z="b">
+              <polygon class="blk" id="bR" points="335,252.5 410,215 410,145 335,182.5"/>
+              <polygon class="blk" id="bT" points="335,182.5 410,145 260,70 185,107.5"/>
+            </g>
+          </g>
+          <g font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#2f2e2b">
+            <text x="20" y="262">Planta baja</text><line x1="96" y1="258" x2="140" y2="262" stroke="#2f2e2b" stroke-opacity=".4"/>
+            <text x="20" y="150">Zona A</text><line x1="72" y1="146" x2="150" y2="168" stroke="#2f2e2b" stroke-opacity=".4"/>
+            <text x="440" y="120">Zona B</text><line x1="455" y1="126" x2="392" y2="170" stroke="#2f2e2b" stroke-opacity=".4"/>
+          </g>
+        </svg>
+        <p class="note">Esquema orientativo de las zonas, no es un plano a escala.</p>
+      </div>
+    </div>
+    <div class="uses">
+      <div class="use rv"><b>Familia numerosa</b><p>Espacio para varias generaciones bajo el mismo techo, cada una con su intimidad.</p></div>
+      <div class="use rv"><b>Inversión</b><p>Vive en la planta baja y alquila las dos viviendas de la primera planta.</p></div>
+      <div class="use rv"><b>Casa rural</b><p>Tres unidades con acceso propio en pleno parque regional, a 35 minutos de Madrid.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VISTAS -->
+<section class="views" id="vistas">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow" style="color:var(--almond)">Orientación sureste</div>
+      <h2>Madrid y la Sierra, <em>cada mañana</em></h2>
+    </div>
+    <div class="views-grid">
+      <figure class="frame tall rv"><img data-id="503da256-9511-4f25-800d-cadbfe7b425f" alt="Vista desde el balcón hacia Madrid"><figcaption>Desde el balcón</figcaption></figure>
+      <figure class="frame wide rv"><img data-id="81f33405-3820-4cd4-b68f-afb7c5886477" alt="Vista de la sierra y el valle"><figcaption>El valle desde la finca</figcaption></figure>
+      <figure class="frame wide rv"><img data-id="6920ce13-9553-452f-a69e-3a619e33b737" alt="Horizonte de Madrid desde la parcela"><figcaption>El horizonte de Madrid</figcaption></figure>
+    </div>
+    <div class="views-copy">
+      <div class="rv"><b>Parque</b><span>Regional de la Cuenca Alta del Manzanares, alrededor de la casa.</span></div>
+      <div class="rv"><b>Almendros</b><span>y vegetación autóctona rodeando la parcela de 471 m².</span></div>
+      <div class="rv"><b>Pozo</b><span>propio de 10 metros para el riego y el jardín.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="gallery" id="galeria">
+  <div class="wrap">
+    <div class="g-head rv">
+      <div><div class="eyebrow">Galería</div><h2>Las 53 fotos, <em>sin filtros</em></h2></div>
+      <button class="btn btn-dark" id="openAll">Ver a pantalla completa</button>
+    </div>
+    <div class="g-grid" id="grid"></div>
+  </div>
+</section>
+<div class="lb" id="lb" role="dialog" aria-label="Foto ampliada">
+  <img id="lbImg" alt="">
+  <button class="x" id="lbX" aria-label="Cerrar">×</button>
+  <button class="pv" id="lbP" aria-label="Anterior">‹</button>
+  <button class="nx" id="lbN" aria-label="Siguiente">›</button>
+  <div class="ct" id="lbC"></div>
+</div>
+
+<!-- FICHA + HIPOTECA -->
+<section class="data" id="datos">
+  <div class="wrap data-grid">
+    <div class="card rv">
+      <div class="eyebrow">Ficha</div>
+      <h3>Los datos</h3>
+      <div class="spec">
+        <div><span>Precio</span><b>750.000 €</b></div>
+        <div><span>Tipo</span><b>Casa independiente</b></div>
+        <div><span>Construidos</span><b>320 m²</b></div>
+        <div><span>Parcela</span><b>471 m²</b></div>
+        <div><span>Plantas</span><b>2 × 160 m²</b></div>
+        <div><span>Dormitorios</span><b>8</b></div>
+        <div><span>Baños</span><b>4</b></div>
+        <div><span>Orientación</span><b>Sureste</b></div>
+        <div><span>Calefacción</span><b>Gas natural</b></div>
+        <div><span>Agua</span><b>Pozo propio 10 m</b></div>
+        <div><span>Estado</span><b>Bien</b></div>
+        <div><span>Certificado energético</span><b><span class="energy">G</span></b></div>
+      </div>
+    </div>
+    <div class="card calc rv">
+      <div class="eyebrow">Financiación</div>
+      <h3>Calcula tu cuota</h3>
+      <label>Ahorro aportado <b id="vE"></b><input type="range" id="iE" min="75000" max="450000" step="5000" value="150000"></label>
+      <label>Plazo <b id="vY"></b><input type="range" id="iY" min="10" max="40" step="1" value="30"></label>
+      <label>Tipo de interés <b id="vI"></b><input type="range" id="iI" min="1" max="6" step="0.05" value="2.75"></label>
+      <div class="quota"><span>Cuota mensual estimada</span><b id="vQ"></b></div>
+      <p class="fine" id="vL"></p>
+      <p class="fine">Cálculo orientativo con cuota fija. No incluye impuestos ni gastos de compraventa y no es una oferta de financiación.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENTORNO -->
+<section class="area" id="entorno">
+  <div class="wrap area-grid">
+    <div class="rv">
+      <div class="eyebrow">Entorno</div>
+      <h2>Naturaleza, <em>sin aislarte</em></h2>
+      <ul class="dist">
+        <li><b>8 min</b><span>a pie del centro de Hoyo de Manzanares: colegios, tiendas, restaurantes, centro de salud y transporte público</span></li>
+        <li><b>7 min</b><span>en coche hasta la A-6</span></li>
+        <li><b>&lt;35 min</b><span>en coche a Madrid capital</span></li>
+      </ul>
+    </div>
+    <figure class="frame rv"><img data-id="2728b568-ddc7-4b8d-9292-3bb98593ce8e" alt="Entorno natural de la finca"><figcaption>Parque Regional de la Cuenca Alta del Manzanares</figcaption></figure>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="visita">
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <div class="eyebrow" style="color:var(--almond)">Visita sin compromiso</div>
+      <h2>Ven a verla <em>con calma</em></h2>
+      <p>Te acompaña un equipo de abogados y arquitectos con más de 30 años de experiencia en Hoyo de Manzanares: análisis técnico del inmueble, seguridad jurídica y acompañamiento hasta la firma.</p>
+    </div>
+    <form id="form" class="rv" novalidate>
+      <div class="row">
+        <label>Nombre<input name="n" required autocomplete="name"></label>
+        <label>Teléfono<input name="t" required inputmode="tel" autocomplete="tel"></label>
+      </div>
+      <label>Me interesa
+        <select name="m"><option>Concertar una visita</option><option>Más información</option><option>Más fotos o el vídeo</option><option>Que me llaméis</option></select>
+      </label>
+      <label>Mensaje (opcional)<textarea name="x" rows="3"></textarea></label>
+      <button class="btn btn-dark" type="submit">Enviar solicitud</button>
+      <div class="ok" id="ok"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Promoción y Gestión Inmobiliaria · Hoyo de Manzanares · Ref. Callejón de la Paloma 7</span>
+    <span>Recorrido web creado por <a href="https://lacedev.com">Lace</a></span>
+  </div>
+</footer>
+
+<script>
+const CDN="https://static.fotocasa.es/images/ads/";
+const big=id=>CDN+id+"?rule=original", small=id=>CDN+id+"?rule=web_412x257";
+document.querySelectorAll("img[data-id]").forEach(i=>{i.src=big(i.dataset.id);i.loading=i.closest(".hero")?"eager":"lazy";});
+
+/* ---- menú ---- */
+const bar=document.getElementById("bar"),drawer=document.getElementById("drawer");
+document.getElementById("menuBtn").onclick=()=>drawer.classList.add("open");
+document.getElementById("menuClose").onclick=()=>drawer.classList.remove("open");
+drawer.querySelectorAll("a").forEach(a=>a.onclick=()=>drawer.classList.remove("open"));
+
+/* ---- recorrido: cada escena es una foto real con un movimiento de cámara ---- */
+const SCENES=[
+ {id:"b89a51ca-6862-4d83-9501-9ea1c6a3d9db",k:"Llegada",t:"La llegada",p:"Patio de acceso privado, rodeado de pinos.",m:[1.15,50,60, 1.0,50,45]},
+ {id:"0df2a318-e756-437b-968e-ee261cdc7aaf",k:"Exterior",t:"Granito y dos plantas",p:"Accesos diferenciados para cada vivienda.",m:[1.0,50,70, 1.18,50,35]},
+ {id:"e30a28b5-a9a7-43c3-b0fe-9d01479d5cb1",k:"Salón",t:"Más de 80 m² de salón",p:"Planta baja reformada, con salida directa al exterior.",m:[1.18,30,50, 1.02,65,50]},
+ {id:"6dab1bb0-340d-4414-bef8-a2119ae3a325",k:"Comedor",t:"Para la mesa grande",p:"Espacio de sobra para reunir a toda la familia.",m:[1.0,35,50, 1.14,60,50]},
+ {id:"251e4fd7-6563-4604-b5dc-0d2884bd575d",k:"Dormitorios",t:"Ocho dormitorios",p:"Luz natural en cada habitación.",m:[1.12,60,50, 1.0,40,50]},
+ {id:"5ed457fc-1d8b-40a6-a9db-75856224633c",k:"Baños",t:"Cuatro baños",p:"Uno por cada zona de la casa, más el de la suite.",m:[1.0,50,50, 1.14,55,45]},
+ {id:"0977f84d-81a5-48bc-b239-63f902af6705",k:"Primera planta",t:"Dos viviendas más",p:"Cada una con su salón-comedor, cocina, dos dormitorios y baño.",m:[1.16,40,50, 1.0,60,50]},
+ {id:"e300c6f7-95fc-4d89-88dd-2455cada6945",k:"Galerías",t:"Galerías acristaladas",p:"Rincones de luz mirando a los árboles.",m:[1.0,50,50, 1.15,50,40]},
+ {id:"503da256-9511-4f25-800d-cadbfe7b425f",k:"Vistas",t:"Y al fondo, Madrid",p:"La vista desde el balcón, orientación sureste.",m:[1.05,50,85, 1.0,50,25]},
+ {id:"8a0787c8-eca3-4990-8cd6-8e3dc7446da1",k:"Entorno",t:"En pleno parque regional",p:"Almendros, encinas y silencio, a 8 minutos a pie del pueblo.",m:[1.16,30,50, 1.02,70,50]}
+];
+const stage=document.getElementById("stage"),tour=document.getElementById("recorrido"),rail=document.getElementById("rail"),prog=document.getElementById("prog");
+tour.style.height=(SCENES.length*100+60)+"svh";
+const els=SCENES.map((s,i)=>{
+  const d=document.createElement("div");d.className="scene";
+  const im=new Image();im.alt=s.t;im.src=big(s.id);im.loading=i<2?"eager":"lazy";d.appendChild(im);
+  stage.insertBefore(d,stage.querySelector(".tour-top"));
+  const c=document.createElement("div");c.className="cap";
+  c.innerHTML=`<div class="n">${String(i+1).padStart(2,"0")} · ${s.k}</div><h3>${s.t}</h3><p>${s.p}</p>`;stage.appendChild(c);
+  const b=document.createElement("button");b.innerHTML=`<span>${s.k}</span><i></i>`;b.setAttribute("aria-label",s.k);
+  b.onclick=()=>{const top=tour.offsetTop+(i+.5)/SCENES.length*(tour.offsetHeight-innerHeight);scrollTo({top,behavior:"smooth"});};
+  rail.appendChild(b);
+  return {d,im,c,b};
+});
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const lerp=(a,b,t)=>a+(b-a)*t, ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+let cur=-1;
+function frame(){
+  const r=tour.getBoundingClientRect(), total=tour.offsetHeight-innerHeight;
+  const p=Math.min(1,Math.max(0,-r.top/total)), f=p*SCENES.length, idx=Math.min(SCENES.length-1,Math.floor(f));
+  prog.style.width=(p*100)+"%";
+  els.forEach((e,i)=>{
+    const local=Math.min(1,Math.max(0,f-i));               // 0→1 dentro de su escena
+    let o=0; if(i===idx)o=1;
+    const fade=.18; // fundido con la siguiente
+    if(i===idx+1){o=Math.max(0,(f-idx-(1-fade))/fade);}    // la siguiente entra al final
+    if(i===0&&f<0)o=1;
+    e.d.style.opacity=o; e.d.style.zIndex=i===idx+1?2:1;
+    if(o>0&&!reduce){
+      const m=SCENES[i].m,t=ease(i===idx?local:0);
+      e.im.style.transform=`scale(${lerp(m[0],m[3],t)})`;
+      e.im.style.objectPosition=`${lerp(m[1],m[4],t)}% ${lerp(m[2],m[5],t)}%`;
+    }
+  });
+  if(idx!==cur){els.forEach((e,i)=>{e.c.classList.toggle("on",i===idx);e.b.classList.toggle("on",i===idx);});cur=idx;}
+  bar.classList.toggle("solid",scrollY>innerHeight*.8&&(r.bottom<60||r.top>60));
+  if(r.top<=0&&r.bottom>innerHeight)bar.classList.remove("solid");
+}
+let ticking=false;addEventListener("scroll",()=>{if(!ticking){ticking=true;requestAnimationFrame(()=>{frame();ticking=false;});}},{passive:true});
+addEventListener("resize",frame);frame();
+
+/* ---- tres viviendas ---- */
+const tabs=[...document.querySelectorAll(".tab")];
+const zoneFill={pb:["pbL","pbR"],a:["aL","aR","aT"],b:["bR","bT"]};
+const base={pbL:"#a39b8e",pbR:"#c4bcae",aL:"#a39b8e",aR:"#c4bcae",aT:"#e2dbce",bR:"#c4bcae",bT:"#e2dbce"};
+const hi={pbL:"#566549",pbR:"#71815f",aL:"#566549",aR:"#71815f",aT:"#a7b697",bR:"#71815f",bT:"#a7b697"};
+function setZone(z){
+  tabs.forEach(t=>t.classList.toggle("on",t.dataset.z===z));
+  Object.keys(base).forEach(id=>{const el=document.getElementById(id);el.setAttribute("fill",zoneFill[z].includes(id)?hi[id]:base[id]);});
+}
+tabs.forEach(t=>t.onclick=()=>setZone(t.dataset.z));
+document.querySelectorAll(".iso .z").forEach(g=>g.onclick=()=>setZone(g.dataset.z));
+setZone("pb");
+
+/* ---- galería ---- */
+const ALL=["b3d7c328-28e5-4e65-8f3a-9087c7725a0a","e30a28b5-a9a7-43c3-b0fe-9d01479d5cb1","969a91bf-20f5-4716-a3c5-e16a96320640","6dab1bb0-340d-4414-bef8-a2119ae3a325","ec6b4d2e-d58b-4ce4-9d6d-88f0f81e7f1e","06466e79-765d-4cc1-b693-30287b905054","e3037be6-986f-4379-b6bd-781a9f4eadf2","fb665026-626b-4bb8-abab-5259cecff944","17134f71-d5ba-4c27-bee5-4eb53bb07325","251e4fd7-6563-4604-b5dc-0d2884bd575d","7232a789-8468-4723-8eb4-bec20e5e0f58","5ed457fc-1d8b-40a6-a9db-75856224633c","2728b568-ddc7-4b8d-9292-3bb98593ce8e","0977f84d-81a5-48bc-b239-63f902af6705","d83bb959-42d1-4805-a5f7-3b11d0304f76","a90a3b41-aec6-400c-afc8-2e2d940c4556","e300c6f7-95fc-4d89-88dd-2455cada6945","9b2789ac-8e74-4e53-a421-a663b37433c6","2939e8b8-8a1f-4957-81b5-1a8cd8e9156b","ea3b25d1-11aa-427e-b355-216f855e1d66","9cc2b044-9e93-46f3-b4c3-2d419579063b","ad97c7d6-ded4-4b56-b7d6-0700b725586c","437ab0d6-f7c2-4ea1-a9ec-54427bf664f7","1edfbf07-182e-4b1c-9acb-1737586ba05f","76766a05-7b1e-482f-ad1c-6dbd74f5e00d","4cfbe5ea-14ed-447a-b243-a27688a6b872","59f543fa-4cef-45f7-b26b-3d890ba94909","3be34281-6b2e-4d80-a6d5-7a55c0480ed6","9703d830-2257-4469-be8e-0b2b89db59c7","32de384c-32b7-421b-9921-d3b9661cd74b","8a0787c8-eca3-4990-8cd6-8e3dc7446da1","b1743992-9e06-469a-8a49-003a9c294aab","5ccc42d9-68fd-4f5f-9664-ed4e434dfa7e","81f33405-3820-4cd4-b68f-afb7c5886477","252b98c1-6032-4800-b921-46f781592fdc","16bcf9f5-4033-43dc-a37e-168eed18dbbf","34dc66bc-6f7c-4666-bf81-fe51cbdc3f0e","e293e189-d1fb-4c96-8d99-9380b73ea4d5","82548805-aa88-42fb-aed0-f1f0f06c60f1","b36943df-7f9a-4205-b36b-93c9631a2e4f","3c9219d7-d60b-4e49-869d-0c911d3e296f","503da256-9511-4f25-800d-cadbfe7b425f","729395fc-b685-4eba-9481-5eaeb0f1ea5f","acc2a8f7-a140-4440-aa4f-321bf2059ed3","f3cfb260-69bb-4d47-b5b9-e3ef47150e68","b6eb3d34-6d62-45bb-8b80-81b2ac3abc97","86528e11-3db2-4483-b899-3ab77ef5795a","6920ce13-9553-452f-a69e-3a619e33b737","5ad7ffc6-d4a5-4d6a-94f0-bdd1a90be0f2","b89a51ca-6862-4d83-9501-9ea1c6a3d9db","4dcbf6af-a019-4cdd-854d-79e66a3f40bd","47378b19-49f5-49d4-ada4-aa65d8747318","0df2a318-e756-437b-968e-ee261cdc7aaf"];
+const grid=document.getElementById("grid"),lb=document.getElementById("lb"),lbImg=document.getElementById("lbImg"),lbC=document.getElementById("lbC");let li=0;
+ALL.forEach((id,i)=>{const b=document.createElement("button");b.setAttribute("aria-label","Ver foto "+(i+1));b.innerHTML=`<img loading="lazy" src="${small(id)}" alt="Foto ${i+1} de la vivienda">`;b.onclick=()=>openLb(i);grid.appendChild(b);});
+function openLb(i){li=(i+ALL.length)%ALL.length;lbImg.src=big(ALL[li]);lbC.textContent=(li+1)+" / "+ALL.length;lb.classList.add("open");}
+document.getElementById("openAll").onclick=()=>openLb(0);
+document.getElementById("lbX").onclick=()=>lb.classList.remove("open");
+document.getElementById("lbP").onclick=()=>openLb(li-1);
+document.getElementById("lbN").onclick=()=>openLb(li+1);
+lb.onclick=e=>{if(e.target===lb)lb.classList.remove("open");};
+addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;if(e.key==="Escape")lb.classList.remove("open");if(e.key==="ArrowLeft")openLb(li-1);if(e.key==="ArrowRight")openLb(li+1);});
+let sx=null;lb.addEventListener("touchstart",e=>sx=e.touches[0].clientX,{passive:true});lb.addEventListener("touchend",e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)openLb(li+(dx<0?1:-1));sx=null;});
+
+/* ---- hipoteca ---- */
+const PRICE=750000,eur=n=>Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,".")+" €";
+const iE=document.getElementById("iE"),iY=document.getElementById("iY"),iI=document.getElementById("iI");
+function calc(){
+  const E=+iE.value,Y=+iY.value,I=+iI.value,L=PRICE-E,r=I/100/12,n=Y*12;
+  const q=r?L*r/(1-Math.pow(1+r,-n)):L/n;
+  document.getElementById("vE").textContent=eur(E);
+  document.getElementById("vY").textContent=Y+" años";
+  document.getElementById("vI").textContent=I.toFixed(2).replace(".",",")+" %";
+  document.getElementById("vQ").textContent=eur(Math.round(q));
+  document.getElementById("vL").textContent="Importe del préstamo: "+eur(L)+" ("+Math.round(L/PRICE*100)+" % del precio).";
+}
+[iE,iY,iI].forEach(i=>i.oninput=calc);calc();
+
+/* ---- formulario ---- */
+const MAIL="ctorralba@icam.es";
+document.getElementById("form").onsubmit=e=>{
+  e.preventDefault();const f=e.target,ok=document.getElementById("ok");
+  if(!f.n.value.trim()||!f.t.value.trim()){ok.textContent="Déjanos tu nombre y un teléfono para poder contactarte.";ok.classList.add("show");return;}
+  const body=`Hola, me interesa la casa del Callejón de la Paloma 7 (Hoyo de Manzanares).\n\nMotivo: ${f.m.value}\nNombre: ${f.n.value}\nTeléfono: ${f.t.value}\n${f.x.value?"\n"+f.x.value:""}`;
+  const href=`mailto:${MAIL}?subject=${encodeURIComponent("Visita · Callejón de la Paloma 7")}&body=${encodeURIComponent(body)}`;
+  ok.innerHTML=`Se abrirá tu correo con la solicitud preparada. Si no se abre, escríbenos a <a href="${href}">${MAIL}</a>.`;ok.classList.add("show");
+  location.href=href;
+};
+
+/* ---- apariciones ---- */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);}}),{threshold:.15});
+document.querySelectorAll(".rv,.frame").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
